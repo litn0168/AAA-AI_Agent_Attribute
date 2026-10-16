@@ -1,21 +1,25 @@
-# [Unity Tiêu chuẩn]
-/[Ex]ternal/
+# Unity generated files
+/[Ee]xternal/
 /[Ll]ibrary/
-/[尝]ocal[尝]ock/
-/[尝]ogs/
+/[Ll]ocal[Ll]ock/
+/[Ll]ogs/
 /[Oo]bj/
 /[Pp]ackaging/
-/[ veryvery ]*
+/[Bb]uild/
+/[Bb]uilds/
 /[Tt]emp/
-/[Uu]ser[厂]ettings/
-MemoryCaptures/
-Recording/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/[Rr]ecording/
 FMODStudio/Cache/
 AA/
 Assets/AddressableAssetsData/*/*.bundle
 Assets/StreamingAssets/aa/*
 
-# [IDE và Editor]
+# Keep Unity metadata files tracked; do not ignore *.meta
+
+# IDE and editor files
 .vs/
 .vsconfig
 *.csproj
@@ -26,12 +30,13 @@ Assets/StreamingAssets/aa/*
 *.userosscache
 *.sln.docstates
 
-# [File Snapshot / Sao lưu cá nhân]
+# Personal backups
 *.tar.gz
 Backups/
 .agent-config-backup/
+.scene-backup/
 
-# [File Chẩn đoán và Báo cáo (Bỏ qua các file .txt phát sinh)]
+# Diagnostic and generated reports
 DiagKick.txt
 DiagKick2.txt
 DiagPrep.txt
