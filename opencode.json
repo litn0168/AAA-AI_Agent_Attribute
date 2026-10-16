@@ -11,5 +11,14 @@
                               }
             },
     "$schema":  "https://opencode.ai/config.json",
-    "default_agent":  "orchestrator"
+    "default_agent":  "orchestrator",
+"compaction": {
+  "auto": true,
+  "keep": {
+    "tokens": 10000
+  }
+},
+"instructions": [
+  ".opencode/memory/MEMORY.md"
+]
 }
