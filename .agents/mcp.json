@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "unity-mcp": {
+      "command": "C:\\Users\\litn0\\.unity/relay\\relay_win.exe",
+      "args": ["--mcp"],
+      "env": {}
+    }
+  }
+}

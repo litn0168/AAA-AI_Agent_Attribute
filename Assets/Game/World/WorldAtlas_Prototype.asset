@@ -1,0 +1,1485 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c089366d04d9da4fba8c1e386e87bbd, type: 3}
+  m_Name: WorldAtlas_Prototype
+  m_EditorClassIdentifier: Assembly-CSharp::DarkRealms.World.WorldAtlasDefinition
+  atlasId: atlas.proto
+  displayName: Dark Realms - Prototype Atlas
+  startMapId: map.proto.hub
+  declaredFlagIds:
+  - flag.pass_bridge_key
+  - flag.ferry_operational
+  tags:
+  - id: biome.plains
+    displayName: Plains
+    category: 0
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: biome.highlands
+    displayName: Highlands
+    category: 0
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: biome.temperate_forest
+    displayName: Temperate Forest
+    category: 0
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: biome.ruins
+    displayName: Ruins
+    category: 0
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: terrain.plateau
+    displayName: Plateau
+    category: 1
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: nation.proto_freeholds
+    displayName: Freeholds (prototype)
+    category: 1
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: feature.bridge
+    displayName: Bridge
+    category: 2
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: feature.pass
+    displayName: Mountain Pass
+    category: 2
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: feature.ferry
+    displayName: Ferry
+    category: 2
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: feature.ruins
+    displayName: Ruins
+    category: 3
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  - id: danger.high
+    displayName: High danger
+    category: 4
+    color: {r: 0.62, g: 0.68, b: 0.78, a: 1}
+  locations:
+  - id: loc.world
+    displayName: World
+    kind: 0
+    parentId: 
+    tags: []
+    aliases: []
+  - id: loc.continent
+    displayName: Prototype Continent
+    kind: 1
+    parentId: loc.world
+    tags: []
+    aliases: []
+  - id: loc.nation_freeholds
+    displayName: Freeholds
+    kind: 3
+    parentId: loc.continent
+    tags:
+    - nation.proto_freeholds
+    aliases: []
+  - id: loc.region_north
+    displayName: North Reach
+    kind: 4
+    parentId: loc.nation_freeholds
+    tags: []
+    aliases: []
+  - id: loc.region_south
+    displayName: South Vale
+    kind: 4
+    parentId: loc.nation_freeholds
+    tags: []
+    aliases: []
+  - id: loc.sub_grassland
+    displayName: Sunlit Grassland
+    kind: 5
+    parentId: loc.region_north
+    tags:
+    - biome.plains
+    aliases: []
+  - id: loc.sub_pass
+    displayName: Windward Pass
+    kind: 5
+    parentId: loc.region_north
+    tags:
+    - biome.highlands
+    aliases: []
+  - id: loc.sub_forest
+    displayName: Mistwood
+    kind: 5
+    parentId: loc.region_south
+    tags:
+    - biome.temperate_forest
+    aliases: []
+  - id: loc.sub_hub
+    displayName: Old Keep District
+    kind: 5
+    parentId: loc.region_south
+    tags:
+    - biome.ruins
+    aliases: []
+  maps:
+  - id: map.proto.hub
+    displayName: Fallen Keep
+    aliases:
+    - hub
+    - keep
+    - start
+    locationId: loc.sub_hub
+    sceneMapId: map.proto.hub
+    mapType: 1
+    scenePath: Assets/Game/Scenes/DarkRealms_Proto_01.unity
+    atlasPosition: {x: 0.22, y: 0.3}
+    thumbnail: {fileID: 0}
+    localBounds:
+      serializedVersion: 2
+      x: -10
+      y: -6
+      width: 72
+      height: 32
+    overview:
+      graphic: {fileID: 0}
+      overviewRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+    tags:
+    - biome.ruins
+    - feature.ruins
+    atlasScale: 200
+    dangerMin: 1
+    dangerMax: 2
+    recommendedLevel: 1
+    defaultEntryAnchorId: port.hub.hub
+    anchors:
+    - id: port.hub.hub
+      displayName: Keep Gate
+      kind: 2
+      roadNodeId: node.hub.centre
+      position: {x: -4, y: 0.6}
+      facingX: 1
+    - id: port.hub.west
+      displayName: West Road
+      kind: 1
+      roadNodeId: node.hub.west
+      position: {x: -9, y: 0.6}
+      facingX: 1
+    - id: port.hub.east
+      displayName: Rampart Walk
+      kind: 1
+      roadNodeId: node.hub.east
+      position: {x: 52, y: 3.6}
+      facingX: 1
+    roadNodes:
+    - id: node.hub.west
+      position: {x: -9, y: 0.5}
+      isLandmark: 0
+    - id: node.hub.centre
+      position: {x: -4, y: 0.5}
+      isLandmark: 0
+    - id: node.hub.east
+      position: {x: 52, y: 3.5}
+      isLandmark: 0
+    roadSegments:
+    - id: seg.hub.west_centre
+      fromNodeId: node.hub.west
+      toNodeId: node.hub.centre
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 0
+      travelTime: 6
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -9, y: 0.5}
+      - {x: -6, y: 0.5}
+      - {x: -4, y: 0.5}
+    - id: seg.hub.centre_east
+      fromNodeId: node.hub.centre
+      toNodeId: node.hub.east
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 0
+      travelTime: 55
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -4, y: 0.5}
+      - {x: 18, y: 0.5}
+      - {x: 34, y: 1.5}
+      - {x: 52, y: 3.5}
+  - id: map.proto.grassland
+    displayName: Proto Grassland
+    aliases:
+    - grassland
+    - plains
+    locationId: loc.sub_grassland
+    sceneMapId: map.proto.grassland
+    mapType: 0
+    scenePath: Assets/Game/Scenes/Proto_Grassland.unity
+    atlasPosition: {x: 0.42, y: 0.46}
+    thumbnail: {fileID: 0}
+    localBounds:
+      serializedVersion: 2
+      x: -30
+      y: -10
+      width: 60
+      height: 26
+    overview:
+      graphic: {fileID: 0}
+      overviewRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+    tags:
+    - biome.plains
+    - biome.temperate_forest
+    atlasScale: 200
+    dangerMin: 1
+    dangerMax: 3
+    recommendedLevel: 2
+    defaultEntryAnchorId: port.grassland.west
+    anchors:
+    - id: port.grassland.west
+      displayName: West Gate
+      kind: 2
+      roadNodeId: node.grass.west
+      position: {x: -26, y: 0.6}
+      facingX: 1
+    - id: port.grassland.east
+      displayName: East Road
+      kind: 2
+      roadNodeId: node.grass.east
+      position: {x: 27, y: 0.6}
+      facingX: 1
+    - id: port.grassland.ferry
+      displayName: River Ferry
+      kind: 2
+      roadNodeId: node.grass.ferry
+      position: {x: 24, y: 0.6}
+      facingX: 1
+    roadNodes:
+    - id: node.grass.west
+      position: {x: -26, y: 0.5}
+      isLandmark: 0
+    - id: node.grass.bridge_west
+      position: {x: -6, y: 0.5}
+      isLandmark: 0
+    - id: node.grass.bridge_east
+      position: {x: 6, y: 0.5}
+      isLandmark: 0
+    - id: node.grass.centre
+      position: {x: 15, y: 0.5}
+      isLandmark: 0
+    - id: node.grass.ferry
+      position: {x: 24, y: 0.5}
+      isLandmark: 0
+    - id: node.grass.east
+      position: {x: 27, y: 0.5}
+      isLandmark: 0
+    roadSegments:
+    - id: seg.grass.west_bridge
+      fromNodeId: node.grass.west
+      toNodeId: node.grass.bridge_west
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 1
+      travelTime: 70
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -26, y: 0.5}
+      - {x: -16, y: 0.5}
+      - {x: -6, y: 0.5}
+    - id: seg.grass.bridge
+      fromNodeId: node.grass.bridge_west
+      toNodeId: node.grass.bridge_east
+      bidirectional: 1
+      mode: 2
+      distance: -1
+      riskCost: 2
+      travelTime: 12
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -6, y: 0.5}
+      - {x: -1.2, y: 0.9}
+      - {x: 1.2, y: 0.9}
+      - {x: 6, y: 0.5}
+    - id: seg.grass.bridge_centre
+      fromNodeId: node.grass.bridge_east
+      toNodeId: node.grass.centre
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 1
+      travelTime: 35
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 6, y: 0.5}
+      - {x: 10, y: 0.5}
+      - {x: 15, y: 0.5}
+    - id: seg.grass.centre_ferry
+      fromNodeId: node.grass.centre
+      toNodeId: node.grass.ferry
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 1
+      travelTime: 30
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 15, y: 0.5}
+      - {x: 20, y: 0.5}
+      - {x: 24, y: 0.5}
+    - id: seg.grass.ferry_east
+      fromNodeId: node.grass.ferry
+      toNodeId: node.grass.east
+      bidirectional: 1
+      mode: 0
+      distance: -1
+      riskCost: 1
+      travelTime: 10
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 24, y: 0.5}
+      - {x: 27, y: 0.5}
+  - id: map.proto.mountain_pass
+    displayName: Proto Mountain Pass
+    aliases:
+    - pass
+    - mountain pass
+    - windward
+    locationId: loc.sub_pass
+    sceneMapId: map.proto.mountain_pass
+    mapType: 0
+    scenePath: Assets/Game/Scenes/Proto_MountainPass.unity
+    atlasPosition: {x: 0.6, y: 0.62}
+    thumbnail: {fileID: 0}
+    localBounds:
+      serializedVersion: 2
+      x: -25
+      y: -14
+      width: 50
+      height: 30
+    overview:
+      graphic: {fileID: 0}
+      overviewRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+    tags:
+    - biome.highlands
+    - terrain.plateau
+    - feature.pass
+    - danger.high
+    atlasScale: 200
+    dangerMin: 3
+    dangerMax: 5
+    recommendedLevel: 4
+    defaultEntryAnchorId: port.pass.west
+    anchors:
+    - id: port.pass.west
+      displayName: Lowland Track
+      kind: 2
+      roadNodeId: node.pass.west
+      position: {x: -22, y: 0.6}
+      facingX: 1
+    - id: port.pass.east
+      displayName: Downhill Track
+      kind: 2
+      roadNodeId: node.pass.east
+      position: {x: 22, y: 0.6}
+      facingX: 1
+    roadNodes:
+    - id: node.pass.west
+      position: {x: -22, y: 0.5}
+      isLandmark: 0
+    - id: node.pass.ridge_west
+      position: {x: -5, y: -6}
+      isLandmark: 0
+    - id: node.pass.gap
+      position: {x: 0, y: -7}
+      isLandmark: 1
+    - id: node.pass.ridge_east
+      position: {x: 5, y: -6}
+      isLandmark: 0
+    - id: node.pass.east
+      position: {x: 22, y: 0.5}
+      isLandmark: 0
+    roadSegments:
+    - id: seg.pass.west_ridge
+      fromNodeId: node.pass.west
+      toNodeId: node.pass.ridge_west
+      bidirectional: 1
+      mode: 3
+      distance: -1
+      riskCost: 3
+      travelTime: 80
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -22, y: 0.5}
+      - {x: -14, y: 0}
+      - {x: -9, y: -3.5}
+      - {x: -5, y: -6}
+    - id: seg.pass.ridge_gap
+      fromNodeId: node.pass.ridge_west
+      toNodeId: node.pass.gap
+      bidirectional: 1
+      mode: 3
+      distance: -1
+      riskCost: 2
+      travelTime: 25
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -5, y: -6}
+      - {x: -2, y: -6.8}
+      - {x: 0, y: -7}
+    - id: seg.pass.gap_ridge
+      fromNodeId: node.pass.gap
+      toNodeId: node.pass.ridge_east
+      bidirectional: 1
+      mode: 3
+      distance: -1
+      riskCost: 2
+      travelTime: 25
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 0, y: -7}
+      - {x: 2, y: -6.8}
+      - {x: 5, y: -6}
+    - id: seg.pass.ridge_east_exit
+      fromNodeId: node.pass.ridge_east
+      toNodeId: node.pass.east
+      bidirectional: 1
+      mode: 3
+      distance: -1
+      riskCost: 3
+      travelTime: 80
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 5, y: -6}
+      - {x: 9, y: -3.5}
+      - {x: 14, y: 0}
+      - {x: 22, y: 0.5}
+  - id: map.proto.forest
+    displayName: Proto Forest
+    aliases:
+    - forest
+    - mistwood
+    locationId: loc.sub_forest
+    sceneMapId: map.proto.forest
+    mapType: 0
+    scenePath: Assets/Game/Scenes/Proto_Forest.unity
+    atlasPosition: {x: 0.78, y: 0.4}
+    thumbnail: {fileID: 0}
+    localBounds:
+      serializedVersion: 2
+      x: -28
+      y: -10
+      width: 56
+      height: 28
+    overview:
+      graphic: {fileID: 0}
+      overviewRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+    tags:
+    - biome.temperate_forest
+    atlasScale: 200
+    dangerMin: 4
+    dangerMax: 6
+    recommendedLevel: 6
+    defaultEntryAnchorId: port.forest.west
+    anchors:
+    - id: port.forest.west
+      displayName: North Trail
+      kind: 2
+      roadNodeId: node.forest.west
+      position: {x: -26, y: 0.6}
+      facingX: 1
+    - id: port.forest.east
+      displayName: Deep Wood Gate
+      kind: 2
+      roadNodeId: node.forest.east
+      position: {x: 26, y: 0.6}
+      facingX: 1
+    - id: port.forest.ferry
+      displayName: River Landing
+      kind: 2
+      roadNodeId: node.forest.ferry
+      position: {x: 22, y: 0.6}
+      facingX: 1
+    roadNodes:
+    - id: node.forest.west
+      position: {x: -26, y: 0.5}
+      isLandmark: 0
+    - id: node.forest.climb_west
+      position: {x: -12, y: 0.5}
+      isLandmark: 0
+    - id: node.forest.crest
+      position: {x: 0, y: 9}
+      isLandmark: 1
+    - id: node.forest.climb_east
+      position: {x: 12, y: 0.5}
+      isLandmark: 0
+    - id: node.forest.ferry
+      position: {x: 22, y: 0.5}
+      isLandmark: 0
+    - id: node.forest.east
+      position: {x: 26, y: 0.5}
+      isLandmark: 0
+    roadSegments:
+    - id: seg.forest.west_climb
+      fromNodeId: node.forest.west
+      toNodeId: node.forest.climb_west
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 2
+      travelTime: 75
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -26, y: 0.5}
+      - {x: -18, y: 0.5}
+      - {x: -12, y: 0.5}
+    - id: seg.forest.climb_crest
+      fromNodeId: node.forest.climb_west
+      toNodeId: node.forest.crest
+      bidirectional: 1
+      mode: 0
+      distance: -1
+      riskCost: 4
+      travelTime: 60
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: -12, y: 0.5}
+      - {x: -9, y: 4}
+      - {x: -5, y: 7.5}
+      - {x: 0, y: 9}
+    - id: seg.forest.crest_climb
+      fromNodeId: node.forest.crest
+      toNodeId: node.forest.climb_east
+      bidirectional: 1
+      mode: 0
+      distance: -1
+      riskCost: 4
+      travelTime: 60
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 0, y: 9}
+      - {x: 5, y: 7.5}
+      - {x: 9, y: 4}
+      - {x: 12, y: 0.5}
+    - id: seg.forest.climb_ferry
+      fromNodeId: node.forest.climb_east
+      toNodeId: node.forest.ferry
+      bidirectional: 1
+      mode: 1
+      distance: -1
+      riskCost: 2
+      travelTime: 40
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 12, y: 0.5}
+      - {x: 17, y: 0.5}
+      - {x: 22, y: 0.5}
+    - id: seg.forest.ferry_east
+      fromNodeId: node.forest.ferry
+      toNodeId: node.forest.east
+      bidirectional: 1
+      mode: 0
+      distance: -1
+      riskCost: 1
+      travelTime: 12
+      condition:
+        kind: 0
+        id: 
+        description: 
+      polyline:
+      - {x: 22, y: 0.5}
+      - {x: 26, y: 0.5}
+  connections:
+  - id: conn.hub_grassland
+    label: Keep Road
+    fromMapId: map.proto.hub
+    fromAnchorId: port.hub.west
+    toMapId: map.proto.grassland
+    toAnchorId: port.grassland.west
+    direction: 0
+    travelMode: 1
+    baseDistance: 60
+    riskCost: 1
+    travelTime: 20
+    condition:
+      kind: 0
+      id: 
+      description: 
+    atlasPolyline:
+    - {x: 0.22, y: 0.3}
+    - {x: 0.32, y: 0.38}
+    - {x: 0.42, y: 0.46}
+  - id: conn.grassland_pass
+    label: Windward Track
+    fromMapId: map.proto.grassland
+    fromAnchorId: port.grassland.east
+    toMapId: map.proto.mountain_pass
+    toAnchorId: port.pass.west
+    direction: 0
+    travelMode: 3
+    baseDistance: 60
+    riskCost: 5
+    travelTime: 60
+    condition:
+      kind: 0
+      id: 
+      description: 
+    atlasPolyline:
+    - {x: 0.42, y: 0.46}
+    - {x: 0.51, y: 0.54}
+    - {x: 0.6, y: 0.62}
+  - id: conn.pass_forest
+    label: Pass Bridge (locked until the key is found)
+    fromMapId: map.proto.mountain_pass
+    fromAnchorId: port.pass.east
+    toMapId: map.proto.forest
+    toAnchorId: port.forest.west
+    direction: 0
+    travelMode: 2
+    baseDistance: 70
+    riskCost: 4
+    travelTime: 45
+    condition:
+      kind: 1
+      id: flag.pass_bridge_key
+      description: the pass bridge key
+    atlasPolyline:
+    - {x: 0.6, y: 0.62}
+    - {x: 0.69, y: 0.52}
+    - {x: 0.78, y: 0.4}
+  - id: conn.grassland_forest_ferry
+    label: River Ferry (no schedule recorded)
+    fromMapId: map.proto.grassland
+    fromAnchorId: port.grassland.ferry
+    toMapId: map.proto.forest
+    toAnchorId: port.forest.ferry
+    direction: 0
+    travelMode: 7
+    baseDistance: 200
+    riskCost: 2
+    travelTime: -1
+    condition:
+      kind: 0
+      id: 
+      description: 
+    atlasPolyline:
+    - {x: 0.42, y: 0.46}
+    - {x: 0.5, y: 0.32}
+    - {x: 0.66, y: 0.34}
+    - {x: 0.78, y: 0.4}
+  - id: conn.forest_river_current
+    label: River Current (one way downstream)
+    fromMapId: map.proto.forest
+    fromAnchorId: port.forest.west
+    toMapId: map.proto.grassland
+    toAnchorId: port.grassland.ferry
+    direction: 1
+    travelMode: 6
+    baseDistance: 95
+    riskCost: 3
+    travelTime: 25
+    condition:
+      kind: 0
+      id: 
+      description: 
+    atlasPolyline:
+    - {x: 0.78, y: 0.4}
+    - {x: 0.62, y: 0.28}
+    - {x: 0.46, y: 0.44}
+  pois:
+  - id: poi.hub.chest_common
+    mapId: map.proto.hub
+    kind: 12
+    displayName: Supply Chest
+    aliases: []
+    tags: []
+    position: {x: 30, y: 1.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.hub.enemy_rat
+    mapId: map.proto.hub
+    kind: 20
+    displayName: Ruins rat
+    aliases: []
+    tags: []
+    position: {x: 8, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: rat
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.dungeon
+    mapId: map.proto.grassland
+    kind: 1
+    displayName: Sunken Barrow
+    aliases: []
+    tags: []
+    position: {x: -14, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.town
+    mapId: map.proto.grassland
+    kind: 0
+    displayName: Wayfarer's Rest
+    aliases: []
+    tags: []
+    position: {x: 15, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.chest_common_1
+    mapId: map.proto.grassland
+    kind: 12
+    displayName: Field Chest
+    aliases: []
+    tags: []
+    position: {x: -20, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.grass.chest_common_2
+    mapId: map.proto.grassland
+    kind: 12
+    displayName: Bridge Chest
+    aliases: []
+    tags: []
+    position: {x: -9, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.grass.chest_purple
+    mapId: map.proto.grassland
+    kind: 13
+    displayName: Ferry Chest
+    aliases: []
+    tags: []
+    position: {x: 21, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.grass.guild
+    mapId: map.proto.grassland
+    kind: 24
+    displayName: Adventurers' Guild
+    aliases: []
+    tags: []
+    position: {x: 15, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.enemy_wolf
+    mapId: map.proto.grassland
+    kind: 20
+    displayName: Plain wolf
+    aliases: []
+    tags: []
+    position: {x: 4, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: wolf
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.enemy_bandit
+    mapId: map.proto.grassland
+    kind: 20
+    displayName: Bandit
+    aliases: []
+    tags: []
+    position: {x: 18, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: bandit
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.story_main
+    mapId: map.proto.grassland
+    kind: 30
+    displayName: 'Chapter 1: the broken keep'
+    aliases: []
+    tags: []
+    position: {x: 24, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: ch1
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.grass.exit_east
+    mapId: map.proto.grassland
+    kind: 9
+    displayName: Windward Track
+    aliases: []
+    tags: []
+    position: {x: 27, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.bridge
+    mapId: map.proto.grassland
+    kind: 4
+    displayName: Stone Bridge
+    aliases: []
+    tags: []
+    position: {x: 0, y: 0.9}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.port_ferry
+    mapId: map.proto.grassland
+    kind: 6
+    displayName: River Ferry
+    aliases: []
+    tags: []
+    position: {x: 24, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.grass.npc_elder
+    mapId: map.proto.grassland
+    kind: 35
+    displayName: Elder Mira
+    aliases: []
+    tags: []
+    position: {x: 15, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: guide
+    npcRouteId: npcroute.grass.elder
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.pass.chest_common
+    mapId: map.proto.mountain_pass
+    kind: 12
+    displayName: Pass Chest
+    aliases: []
+    tags: []
+    position: {x: -4, y: -6}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.pass.chest_special
+    mapId: map.proto.mountain_pass
+    kind: 14
+    displayName: Ridge Reliquary
+    aliases: []
+    tags: []
+    position: {x: 8, y: -3}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.pass.boss
+    mapId: map.proto.mountain_pass
+    kind: 22
+    displayName: Ridge Warden
+    aliases: []
+    tags: []
+    position: {x: 0, y: -7}
+    dangerLevel: 6
+    recommendedLevel: 6
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.pass.enemy_golem
+    mapId: map.proto.mountain_pass
+    kind: 20
+    displayName: Rock golem
+    aliases: []
+    tags: []
+    position: {x: 10, y: 0.2}
+    dangerLevel: 4
+    recommendedLevel: 0
+    enemySpecies: rock_golem
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.pass.enemy_harpy
+    mapId: map.proto.mountain_pass
+    kind: 20
+    displayName: Cliff harpy
+    aliases: []
+    tags: []
+    position: {x: -10, y: 0.2}
+    dangerLevel: 5
+    recommendedLevel: 0
+    enemySpecies: harpy
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.pass.story_crossed
+    mapId: map.proto.mountain_pass
+    kind: 32
+    displayName: 'Crossed Path: two travellers'
+    aliases: []
+    tags: []
+    position: {x: -14, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: ch2
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.pass.gate_locked
+    mapId: map.proto.mountain_pass
+    kind: 10
+    displayName: Bridge Gate (key required)
+    aliases: []
+    tags: []
+    position: {x: 22, y: 0.6}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.pass.exit_east
+    mapId: map.proto.mountain_pass
+    kind: 9
+    displayName: Downhill Track
+    aliases: []
+    tags: []
+    position: {x: 22, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.pass.npc_scout
+    mapId: map.proto.mountain_pass
+    kind: 35
+    displayName: Scout Ivo
+    aliases: []
+    tags: []
+    position: {x: -18, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: inquire
+    npcRouteId: npcroute.pass.scout_incomplete
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.chest_common_1
+    mapId: map.proto.forest
+    kind: 12
+    displayName: Hollow Log
+    aliases: []
+    tags: []
+    position: {x: -22, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.forest.chest_common_2
+    mapId: map.proto.forest
+    kind: 12
+    displayName: Mossy Cache
+    aliases: []
+    tags: []
+    position: {x: -8, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.forest.chest_common_3
+    mapId: map.proto.forest
+    kind: 12
+    displayName: Crest Chest
+    aliases: []
+    tags: []
+    position: {x: 0, y: 9.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.forest.chest_purple
+    mapId: map.proto.forest
+    kind: 13
+    displayName: Deepwood Reliquary
+    aliases: []
+    tags: []
+    position: {x: 18, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.forest.shop
+    mapId: map.proto.forest
+    kind: 26
+    displayName: Trapper's Post
+    aliases: []
+    tags: []
+    position: {x: 20, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.altar
+    mapId: map.proto.forest
+    kind: 25
+    displayName: Moss Altar
+    aliases: []
+    tags: []
+    position: {x: 6, y: 5}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.enemy_wolf
+    mapId: map.proto.forest
+    kind: 20
+    displayName: Mistwolf
+    aliases: []
+    tags: []
+    position: {x: -10, y: 0.2}
+    dangerLevel: 4
+    recommendedLevel: 0
+    enemySpecies: wolf
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.enemy_spider
+    mapId: map.proto.forest
+    kind: 20
+    displayName: Grove spider
+    aliases: []
+    tags: []
+    position: {x: 10, y: 0.2}
+    dangerLevel: 5
+    recommendedLevel: 0
+    enemySpecies: grove_spider
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.story_side
+    mapId: map.proto.forest
+    kind: 31
+    displayName: 'Side Story: the trapper''s debt'
+    aliases: []
+    tags: []
+    position: {x: 18, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: ch2
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 1
+  - id: poi.forest.dungeon
+    mapId: map.proto.forest
+    kind: 2
+    displayName: Grove Hollow
+    aliases: []
+    tags: []
+    position: {x: -6, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.landmark
+    mapId: map.proto.forest
+    kind: 18
+    displayName: Sunken Shrine
+    aliases: []
+    tags: []
+    position: {x: -16, y: 1.5}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: 
+    npcRouteId: 
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  - id: poi.forest.npc_trapper
+    mapId: map.proto.forest
+    kind: 35
+    displayName: Trapper Sena
+    aliases: []
+    tags: []
+    position: {x: 20, y: 0.2}
+    dangerLevel: 0
+    recommendedLevel: 0
+    enemySpecies: 
+    storyChapter: 
+    pathAction: purchase
+    npcRouteId: npcroute.forest.trapper
+    condition:
+      kind: 0
+      id: 
+      description: 
+    countsAsObjective: 0
+  npcRoutes:
+  - id: npcroute.grass.elder
+    npcId: npc.elder_mira
+    displayName: Elder Mira's round
+    mapId: map.proto.grassland
+    waypoints:
+    - {x: 15, y: 0.2}
+    - {x: -4, y: 0.2}
+    - {x: 0, y: 0.9}
+    - {x: 21, y: 0.2}
+    condition:
+      kind: 0
+      id: 
+      description: 
+    visibility: 1
+    knownByDefault: 0
+  - id: npcroute.forest.trapper
+    npcId: npc.trapper_sena
+    displayName: Trapper's patrol
+    mapId: map.proto.forest
+    waypoints:
+    - {x: 20, y: 0.2}
+    - {x: 12, y: 0.5}
+    - {x: 0, y: 9}
+    - {x: -22, y: 0.2}
+    condition:
+      kind: 0
+      id: 
+      description: 
+    visibility: 2
+    knownByDefault: 1
+  - id: npcroute.pass.scout_incomplete
+    npcId: npc.scout_ivo
+    displayName: Scout Ivo's patrol (data incomplete)
+    mapId: map.proto.mountain_pass
+    waypoints:
+    - {x: -18, y: 0.2}
+    condition:
+      kind: 0
+      id: 
+      description: 
+    visibility: 1
+    knownByDefault: 0
+  blockers:
+  - id: blocker.grass.gorge
+    label: River gorge
+    mapId: map.proto.grassland
+    points:
+    - {x: -1.2, y: -10}
+    - {x: 1.2, y: -10}
+    - {x: 1.2, y: -0.6}
+    - {x: -1.2, y: -0.6}
+  - id: blocker.pass.ridge
+    label: Windward ridge
+    mapId: map.proto.mountain_pass
+    points:
+    - {x: -3.5, y: -2}
+    - {x: 3.5, y: -2}
+    - {x: 5.5, y: 4}
+    - {x: 3, y: 12}
+    - {x: -3, y: 12}
+    - {x: -5.5, y: 4}
+  - id: blocker.forest.shelf
+    label: Rock shelf
+    mapId: map.proto.forest
+    points:
+    - {x: -7, y: -8}
+    - {x: 7, y: -8}
+    - {x: 8, y: 3}
+    - {x: 4, y: 7}
+    - {x: -4, y: 7}
+    - {x: -8, y: 3}
+  routeSettings:
+    distanceWeight: 1
+    riskWeight: 1
+    timeWeight: 1
+    rejectGeometryThroughBlockers: 1
+    allowSchematicSegments: 1
+    smoothingPasses: 1
+    smoothingClearance: 0.3

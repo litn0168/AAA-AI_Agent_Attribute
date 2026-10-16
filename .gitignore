@@ -1,0 +1,62 @@
+# [Unity Tiêu chuẩn]
+/[Ex]ternal/
+/[Ll]ibrary/
+/[尝]ocal[尝]ock/
+/[尝]ogs/
+/[Oo]bj/
+/[Pp]ackaging/
+/[ veryvery ]*
+/[Tt]emp/
+/[Uu]ser[厂]ettings/
+MemoryCaptures/
+Recording/
+FMODStudio/Cache/
+AA/
+Assets/AddressableAssetsData/*/*.bundle
+Assets/StreamingAssets/aa/*
+
+# [IDE và Editor]
+.vs/
+.vsconfig
+*.csproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# [File Snapshot / Sao lưu cá nhân]
+*.tar.gz
+Backups/
+.agent-config-backup/
+
+# [File Chẩn đoán và Báo cáo (Bỏ qua các file .txt phát sinh)]
+DiagKick.txt
+DiagKick2.txt
+DiagPrep.txt
+DiagState.txt
+FinalState.txt
+FuzzReport.txt
+GameplayAudit.txt
+GeometryAt53.txt
+GeometryCrossCheck.txt
+GroundCheckProbe.txt
+GroundStateVerify.txt
+GroundSweepProbe.txt
+InputDiagnostics.txt
+InventoryModelBoundaryReport.txt
+InventoryModelFuzzReport.txt
+InventoryPlayMode_*.txt
+PlayModeState.txt
+ProbeKick*.txt
+ProbeReport*.txt
+Stage1EdgeCases.txt
+Stage1Verify.txt
+SurfaceTruth.txt
+ThresholdTruth.txt
+VisualAudit*.txt
+VisualComposition.txt
+WorldAtlasModelTestsReport.txt
+WorldAtlasValidationReport.txt
+opencode.json.bak

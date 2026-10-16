@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - Enemy
+  - Attack
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 589648
+    locked: 0
+  - name: ParallaxFar
+    uniqueID: 199101743
+    locked: 0
+  - name: ParallaxMid
+    uniqueID: 199108704
+    locked: 0
+  - name: ParallaxNear
+    uniqueID: 1877428496
+    locked: 0
+  - name: Ground
+    uniqueID: 49067256
+    locked: 0
+  - name: Environment
+    uniqueID: 1628886338
+    locked: 0
+  - name: Characters
+    uniqueID: 608003419
+    locked: 0
+  - name: Effects
+    uniqueID: 1541213105
+    locked: 0
+  - name: Foreground
+    uniqueID: 1347036212
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []

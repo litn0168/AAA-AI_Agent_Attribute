@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a3ec6f61e6addc4fa85ba70d289b9d3, type: 3}
+  m_Name: Proto_Weapon_LightBlade
+  m_EditorClassIdentifier: Assembly-CSharp::DarkRealms.Inventory.InventoryItemDefinition
+  itemId: proto.weapon.light_blade
+  displayName: Proto Light Blade
+  description: PROTOTYPE test data created to verify inventory-to-combat weapon integration. Not game balance.
+  icon: {fileID: 0}
+  category: 0
+  maxStack: 1
+  weapon: {fileID: 11400000, guid: 3bf28a3f83c9e354995cb5ea0b985f64, type: 2}

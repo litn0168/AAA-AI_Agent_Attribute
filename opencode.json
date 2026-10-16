@@ -1,0 +1,15 @@
+﻿{
+    "mcp":  {
+                "unity-mcp":  {
+                                  "command":  [
+                                                  "C:\\Users\\litn0\\.unity\\relay\\relay_win.exe",
+                                                  "--mcp"
+                                              ],
+                                  "timeout":  20000,
+                                  "type":  "local",
+                                  "enabled":  true
+                              }
+            },
+    "$schema":  "https://opencode.ai/config.json",
+    "default_agent":  "orchestrator"
+}
